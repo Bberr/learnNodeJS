@@ -9,12 +9,12 @@ function name(fristName,lastName){
 }
 //arrow function
 name=(fristName,lastName)=>fristName+lastName//arrow function ถ้าไม่มีการคำนวนไม่ต้องมี {} ก็ได้
+console.log(name("big","innork"));
 
 //object
 const customerName = "big"
 const age = 20
 const address = "มหาสารคาม"
-
 const customer = {
     customerName : customerName,age,address,//ในกรณีที่จะเอาatribliteมาเป็นข้อมูลในobjectสามารถเขียนแบบนี้ได้
 
@@ -22,15 +22,18 @@ const customer = {
         console.log("ชื่อผู้ใช้ : "+customerName);
     }
 }
+console.log(customer);
+customer.showData();
+
 //String
 const address2 = "เกียรตินำชัย อินทร์นอก ที่อยู่ 206 หมู่ 1 ต.หินดาด อ.ห้วยแถลง จ.นครราชสีมา เบอร์โทรติดต่อ 0983395822"
 const address3 = `เกียรตินำชัย อินทร์นอก
                 ที่อยู่ 206 หมู่ 1 ต.หินดาด อ.ห้วยแถลง จ.นครราชสีมา 
                 เบอร์โทรติดต่อ 0983395822` //ขึ้นบรรทัดข้อความยาวๆ
     //ตัวแปรต่อString
-let name = "เกียรตินำชัย อินทร์นอก"
+let namee = "เกียรตินำชัย อินทร์นอก"
 let telphone = "0983395822"
-const address4 = `${name}
+const address4 = `${namee}
                 ที่อยู่ 206 หมู่ 1 ต.หินดาด อ.ห้วยแถลง จ.นครราชสีมา 
                 เบอร์โทรติดต่อ ${telphone}`
 
@@ -47,8 +50,28 @@ sumulation=(...numArr)=>{
     return total
 }
 
-
-//main
-console.log(name("big","innork"));
-console.log(customer);
-customer.showData();
+//Destructuring การสลายโครงสร้าง
+const colors = ["ขาว","แดง"]
+    //old
+let x = colors[0]
+let y = colors[1]
+    //Destructuring
+const [a,b] = colors
+console.log(a)
+console.log(b)
+    //เอาแค่ตัวใดตัวหนี่ง
+const [,c] = colors //เอาแดง
+const [d,] = colors //เอาขาว
+    //ใช้กับobject
+const product = {
+    productName : "computer",
+    price : 30000,
+    stock : 10
+}
+        //old
+const named = product.productName
+const price = product.price
+const stock = product.stock
+        //Destructuring
+const {e,f,g} = product
+//******arr use [] | object use {}******
