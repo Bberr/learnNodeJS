@@ -1,13 +1,15 @@
 //var -> Global Variable
 //let -> local Variable
 //const -> constant
+//ใน JS ทำ overloading method ไม่ได้เด้อ
 
 //old function
 function name(fristName,lastName){
     return fristName+lastName
 }
 //arrow function
-name=(fristName,lastName)=>fristName+lastName
+name=(fristName,lastName)=>fristName+lastName//arrow function ถ้าไม่มีการคำนวนไม่ต้องมี {} ก็ได้
+
 //object
 const customerName = "big"
 const age = 20
@@ -31,6 +33,20 @@ let telphone = "0983395822"
 const address4 = `${name}
                 ที่อยู่ 206 หมู่ 1 ต.หินดาด อ.ห้วยแถลง จ.นครราชสีมา 
                 เบอร์โทรติดต่อ ${telphone}`
+
+//Space Operator กระจายข้อมูลใน arr หนึ่ง ไปใส่ในอีก arr หนึ่ง
+const newArr = [100,200,300]
+const data = [10,20,...newArr]//Space Operator
+data.push(...newArr)//Space Operator
+    //ถ้าไม้มี...จะกลายเป็นArr2D
+
+//Rest Parameter เป็นการใช้ Space Operator ในฟังก์ชัน
+sumulation=(...numArr)=>{
+    let total = 0
+    for(let number of numArr) total += number
+    return total
+}
+
 
 //main
 console.log(name("big","innork"));
