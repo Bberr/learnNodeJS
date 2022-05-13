@@ -75,3 +75,18 @@ const stock = product.stock
         //Destructuring
 const {e,f,g} = product
 //******arr use [] | object use {}******
+
+//join, concat
+const dataaa = [100,200,300]
+console.log(data)
+//joinเปลี่ยน arr เป็น str
+const resultt = data.join();
+resultt = data.join("-");
+//concat การต่อarr
+const one = [100,200]
+const two = [300,400,500]
+one.concat(two)
+
+// push, pop, shift, unshift
+const deta = [10,20,30]
+deta.push(40)
